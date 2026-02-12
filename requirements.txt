@@ -7,3 +7,6 @@ scikit-learn
 pillow
 streamlit
 jupyter
+plotly
+reportlab
+fpdf

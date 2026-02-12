@@ -29,7 +29,10 @@ wheels/
 
 # Machine Learning Models
 models/*.pkl
-models/*.h5
+models/*.hModuleNotFoundError: No module named 'plotly'
+
+File "C:\Users\Administrator\Desktop\AIC\ui\app.py", line 6, in <module>
+    import plotly.express as px5
 models/*.joblib
 
 # Data files (large datasets)
