@@ -214,7 +214,7 @@ AIC/
 
 | Name | Role | Contact |
 |------|------|---------|
-| [Name 1] | Project Lead | email@example.com |
+| Pacifique Bakundukize  | Project Lead | pacitekno12@gmail.com |
 | [Name 2] | ML Engineer | email@example.com |
 | [Name 3] | Data Scientist | email@example.com |
 | [Name 4] | Backend Developer | email@example.com |
