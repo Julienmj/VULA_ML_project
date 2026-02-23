@@ -1,0 +1,330 @@
+/* ========================================
+   CROP DISEASE DETECTION - CUSTOM STYLES
+   Modern Green & White Agricultural Theme
+   ======================================== */
+
+/* ===== GLOBAL STYLES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-green: #2D5016;
+    --accent-green: #4CAF50;
+    --light-green: #8BC34A;
+    --pale-green: #E8F5E9;
+    --white: #FFFFFF;
+    --off-white: #F8F9FA;
+    --light-gray: #F5F5F5;
+    --dark-gray: #424242;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.main {
+    background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+    padding: 2rem;
+}
+
+/* ===== HEADER ===== */
+.main-header {
+    background: linear-gradient(135deg, #2D5016 0%, #4CAF50 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-lg);
+    color: white;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-top: 0.5rem;
+}
+
+/* ===== METRIC CARDS ===== */
+.metric-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(76, 175, 80, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2D5016 0%, #4CAF50 100%);
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-green);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin: 0.5rem 0;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.metric-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* ===== TABS ===== */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background-color: var(--off-white);
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #2D5016 0%, #4CAF50 100%) !important;
+    color: white !important;
+}
+
+/* ===== CHARTS ===== */
+.chart-container {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    margin: 1rem 0;
+    border: 1px solid rgba(76, 175, 80, 0.1);
+}
+
+.chart-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+/* ===== UPLOAD ZONE ===== */
+.upload-zone {
+    background: linear-gradient(135deg, #E8F5E9 0%, #FFFFFF 100%);
+    border: 2px dashed var(--accent-green);
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-zone:hover {
+    background: linear-gradient(135deg, #C8E6C9 0%, #E8F5E9 100%);
+    border-color: var(--primary-green);
+    transform: scale(1.02);
+}
+
+/* ===== PREDICTION CARD ===== */
+.prediction-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    border-left: 6px solid var(--accent-green);
+    margin: 1.5rem 0;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prediction-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.confidence-bar {
+    height: 12px;
+    background: var(--light-gray);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2D5016 0%, #4CAF50 100%);
+    border-radius: 6px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== SIDEBAR ===== */
+.css-1d391kg {
+    background: linear-gradient(180deg, #2D5016 0%, #1A3010 100%);
+}
+
+.sidebar-content {
+    padding: 1rem;
+}
+
+.sidebar-title {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== BUTTONS ===== */
+.stButton > button {
+    background: linear-gradient(135deg, #2D5016 0%, #4CAF50 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ===== PROGRESS BAR ===== */
+.stProgress > div > div {
+    background: linear-gradient(90deg, #2D5016 0%, #4CAF50 100%);
+    border-radius: 4px;
+}
+
+/* ===== DATAFRAME ===== */
+.dataframe {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.dataframe thead tr {
+    background: linear-gradient(135deg, #2D5016 0%, #4CAF50 100%);
+    color: white;
+}
+
+/* ===== ALERTS ===== */
+.stAlert {
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-green);
+}
+
+/* ===== LOADING SPINNER ===== */
+.stSpinner > div {
+    border-top-color: var(--accent-green) !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .upload-zone {
+        padding: 2rem;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.animate-fade {
+    animation: fadeIn 0.5s ease;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* ===== GLASSMORPHISM ===== */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #2D5016 0%, #4CAF50 100%);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-green);
+}

@@ -1,0 +1,32 @@
+# Color Theme Configuration
+# Green & White Agricultural Theme
+
+# Primary Colors
+PRIMARY_GREEN = "#2D5016"
+ACCENT_GREEN = "#4CAF50"
+LIGHT_GREEN = "#8BC34A"
+PALE_GREEN = "#E8F5E9"
+
+# Neutral Colors
+WHITE = "#FFFFFF"
+OFF_WHITE = "#F8F9FA"
+LIGHT_GRAY = "#F5F5F5"
+GRAY = "#9E9E9E"
+DARK_GRAY = "#424242"
+BLACK = "#1A1A1A"
+
+# Status Colors
+SUCCESS = "#66BB6A"
+WARNING = "#FFA726"
+ERROR = "#EF5350"
+INFO = "#42A5F5"
+
+# Gradient Definitions
+GRADIENT_PRIMARY = f"linear-gradient(135deg, {PRIMARY_GREEN} 0%, {ACCENT_GREEN} 100%)"
+GRADIENT_LIGHT = f"linear-gradient(135deg, {PALE_GREEN} 0%, {WHITE} 100%)"
+GRADIENT_CARD = f"linear-gradient(135deg, {WHITE} 0%, {OFF_WHITE} 100%)"
+
+# Chart Colors
+CHART_COLORS = [ACCENT_GREEN, LIGHT_GREEN, PRIMARY_GREEN, SUCCESS, INFO]
+CHART_HEALTHY = SUCCESS
+CHART_DISEASED = ERROR
