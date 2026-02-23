@@ -38,9 +38,8 @@ models/*.joblib
 # Data files (large datasets)
 data/raw/*
 data/processed/*.csv
-PlantVillagedataset/
 *.csv
-
+PlantVillage/
 # Keep directory structure
 !data/raw/.gitkeep
 !data/processed/.gitkeep
