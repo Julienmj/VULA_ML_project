@@ -18,6 +18,7 @@ An advanced AI-powered system using **Convolutional Neural Networks (CNN)** to d
 - [Usage Guide](#-usage-guide)
 - [Model Architecture](#-model-architecture)
 - [Dataset](#-dataset)
+- [Application Screenshots](#-application-screenshots)
 - [Results](#-results)
 - [Team](#-team)
 
@@ -304,6 +305,36 @@ Input Image (128×128×3 RGB)
 #### 🌶️ Pepper (2 classes)
 1. Bacterial Spot
 2. Healthy
+
+---
+
+## 📸 Application Screenshots
+
+### Dashboard Overview
+Comprehensive statistics and visualizations of the dataset, model performance, and health distribution.
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### Disease Detection
+Upload crop leaf images and receive instant AI-powered disease diagnosis with confidence scores.
+
+![Disease Detection](screenshots/disease_detect.png)
+
+---
+
+### Analytics & Insights
+Interactive charts showing disease frequency, crop-wise health analysis, and data distributions.
+
+![Analytics](screenshots/analytics.png)
+
+---
+
+### Data Export
+Export full dataset or filtered reports in CSV format for further analysis.
+
+![Export Data](screenshots/export.png)
 
 ---
 
