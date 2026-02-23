@@ -7,15 +7,15 @@ import cv2
 import pickle
 from pathlib import Path
 
-CSV_PATH = r'c:\Users\Administrator\Desktop\AIC\data\processed\dataset_metadata.csv'
-MODEL_DIR = Path(r'c:\Users\Administrator\Desktop\AIC\models')
+CSV_PATH = r'c:\pac\AGRICULTURE---Crop-Disease-Detection-System-AIC\data\processed\dataset_metadata.csv'
+MODEL_DIR = Path(r'c:\pac\AGRICULTURE---Crop-Disease-Detection-System-AIC\models')
 MODEL_PATH = MODEL_DIR / 'crop_disease_model.pkl'
 LABEL_PATH = MODEL_DIR / 'label_encoder.pkl'
 
 print("Loading data...")
 df = pd.read_csv(CSV_PATH)
-df = df[df['is_valid'] == True].sample(min(20000, len(df)), random_state=42)
-print(f"Using {len(df)} images")
+df = df[df['is_valid'] == True]
+print(f"Using all {len(df)} images for better accuracy")
 
 print("Loading and processing images...")
 def load_image(path):
@@ -47,7 +47,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 print(f"\nTrain: {len(X_train)}, Test: {len(X_test)}")
 
 print("\nTraining Random Forest model...")
-model = RandomForestClassifier(n_estimators=200, max_depth=30, random_state=42, n_jobs=-1, verbose=1)
+model = RandomForestClassifier(n_estimators=300, max_depth=40, min_samples_split=3, random_state=42, n_jobs=-1, verbose=1, class_weight='balanced')
 model.fit(X_train, y_train)
 
 print("\nEvaluating model...")

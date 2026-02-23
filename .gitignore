@@ -38,7 +38,7 @@ models/*.joblib
 # Data files (large datasets)
 data/raw/*
 data/processed/*.csv
-plantvillage dataset/
+PlantVillagedataset/
 *.csv
 
 # Keep directory structure

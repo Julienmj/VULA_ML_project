@@ -250,8 +250,16 @@ def load_metadata():
 
 def preprocess_image(image):
     img = cv2.resize(image, (64, 64))
-    img = img.flatten() / 255.0
-    return img.reshape(1, -1)
+    img = img.astype(np.float32) / 255.0
+    
+    # Extract color histogram features
+    hist_r = cv2.calcHist([img], [0], None, [8], [0, 1]).flatten()
+    hist_g = cv2.calcHist([img], [1], None, [8], [0, 1]).flatten()
+    hist_b = cv2.calcHist([img], [2], None, [8], [0, 1]).flatten()
+    
+    # Combine features
+    features = np.concatenate([img.flatten(), hist_r, hist_g, hist_b])
+    return features.reshape(1, -1)
 
 def generate_pdf_report(data):
     buffer = BytesIO()
