@@ -83,6 +83,8 @@ class CropDataset(Dataset):
     
     def __getitem__(self, idx):
         img = cv2.imread(self.image_paths[idx])
+        if img is None:
+            raise ValueError(f"Failed to load image: {self.image_paths[idx]}")
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img = cv2.resize(img, (128, 128))
         
@@ -124,8 +126,8 @@ print(f"Saved train/test splits to {SPLITS_DIR}")
 
 train_dataset = CropDataset(X_train, y_train, augment=True)
 test_dataset = CropDataset(X_test, y_test, augment=False)
-train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True, num_workers=0)
-test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False, num_workers=0)
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True, num_workers=0)
+test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False, num_workers=0)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f"\nUsing device: {device}")
