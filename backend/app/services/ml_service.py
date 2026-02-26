@@ -16,7 +16,6 @@ class CropDiseaseCNN(nn.Module):
         )
         self.classifier = nn.Sequential(
             nn.Flatten(),
-            nn.Dropout(0.5),
             nn.Linear(256 * 8 * 8, 512),
             nn.ReLU(),
             nn.Dropout(0.3),
