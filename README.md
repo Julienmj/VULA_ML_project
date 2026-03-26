@@ -1,6 +1,6 @@
 # 🌿 Crop Disease Detection System - Deep Learning CNN
 
-An advanced AI-powered system using **Convolutional Neural Networks (CNN)** to detect and classify crop diseases from leaf images, helping farmers make timely and informed decisions
+An advanced AI-powered system using **Convolutional Neural Networks (CNN)** to detect and classify crop diseases from leaf images, helping farmers make timely and informed decisions.
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red)
